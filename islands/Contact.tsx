@@ -69,7 +69,7 @@ export default function Contact() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/"
+              href="https://www.linkedin.com/in/swann-martin/"
               target="_blank"
               rel="noopener noreferrer"
               class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
