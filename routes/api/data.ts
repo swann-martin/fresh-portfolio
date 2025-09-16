@@ -122,7 +122,7 @@ export const portfolioData: PortfolioData[] = [
     id: Math?.random()?.toString(),
     name: "Spotify Clone UI",
     deployedAt: "https://swannmartin-vue-spotify.deno.dev/",
-    languages: ["javacript", "vue", "tailwind", "all"],
+    languages: ["javascript", "vue", "tailwind", "all"],
     languagesIcons: ["fab fa-js", "fab fa-css3-alt"],
     sourceCode: "https://github.com/swann-martin/vue-spotify-clone",
     info: "This project was made following a YouTube tutorial to learn Vue3, Pinia and tailwind.",
