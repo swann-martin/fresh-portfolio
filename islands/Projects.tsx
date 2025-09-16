@@ -79,15 +79,15 @@ export default function Projects() {
 
         <div class="mb-8">
           <div class="max-w-md mx-auto">
+            <label for="project-search" class="sr-only">Search projects</label>
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg
-                  title="Search Icon"
-                  aria-label="Search Icon"
                   class="h-5 w-5 text-indigo-500 dark:text-indigo-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     stroke-linecap="round"
@@ -98,22 +98,28 @@ export default function Projects() {
                 </svg>
               </div>
               <input
+                id="project-search"
                 type="search"
                 class="block w-full pl-10 pr-3 py-3 border-2 border-indigo-300/50 dark:border-indigo-600/30 rounded-full leading-5 bg-white/80 dark:bg-gray-700/90 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-transparent backdrop-blur-sm shadow-sm transition-all duration-300 hover:shadow-md"
                 placeholder="Search projects..."
                 value={searchQuery.value}
                 onInput={handleSearch}
+                aria-describedby="search-help"
+                autocomplete="off"
               />
+            </div>
+            <div id="search-help" class="sr-only">
+              Search through project names and descriptions
             </div>
           </div>
         </div>
 
         <div class="mb-8">
-          <div class="flex flex-wrap gap-2 justify-center max-w-3xl mx-auto">
+          <div class="flex flex-wrap gap-2 justify-center max-w-3xl mx-auto" role="group" aria-label="Filter projects by technology">
             {allLanguages.map((lang) => (
               <button
                 type="button"
-                class={`text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 transform ${
+                class={`text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${
                   selectedLanguage.value === lang
                     ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/30 scale-105 font-semibold"
                     : "bg-gray-100/80 dark:bg-gray-700/80 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 hover:-translate-y-0.5 backdrop-blur-sm"
@@ -128,6 +134,8 @@ export default function Projects() {
                     filterData(lang);
                   }
                 }}
+                aria-pressed={selectedLanguage.value === lang}
+                aria-label={`Filter projects by ${lang === "all" ? "all technologies" : lang}`}
               >
                 {lang === "all"
                   ? "All Projects"

@@ -12,17 +12,53 @@ export default function App({ Component }: PageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Swann Martin will code your website in React, TypeScript, Next or Wordpress. He can also make hybrid mobile apps for ios and android using React Native. Author: Swann Martin, Category: Web Development"
+          content="Swann Martin - Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh. Creating modern web applications with clean, efficient code."
         />
+        <meta name="keywords" content="web developer, full-stack developer, React, TypeScript, Deno, Fresh, JavaScript, portfolio" />
+        <meta name="author" content="Swann Martin" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Swann Martin - Full-Stack Developer" />
+        <meta property="og:description" content="Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh. Creating modern web applications with clean, efficient code." />
         <meta property="og:image" content="https://swannmartin.xyz/home.webp" />
         <meta property="og:image:width" content="1870" />
         <meta property="og:image:height" content="939" />
-        <meta property="og:title" content="Swann Martin Developer" />
-        <meta
-          property="og:description"
-          content="Swann Martin will code your website in React, TypeScript, Next or Wordpress. He can also make hybrid mobile apps in React Native"
-        />
-        <title>Swann Martin Developer</title>
+        <meta property="og:url" content="https://swannmartin.xyz" />
+        <meta property="og:site_name" content="Swann Martin Portfolio" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Swann Martin - Full-Stack Developer" />
+        <meta name="twitter:description" content="Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh." />
+        <meta name="twitter:image" content="https://swannmartin.xyz/home.webp" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Swann Martin",
+            "jobTitle": "Full-Stack Developer",
+            "url": "https://swannmartin.xyz",
+            "sameAs": [
+              "https://github.com/swann-martin",
+              "https://www.linkedin.com/in/swann-martin/"
+            ],
+            "knowsAbout": [
+              "React",
+              "TypeScript",
+              "Deno",
+              "Fresh",
+              "JavaScript",
+              "Web Development",
+              "Full-Stack Development"
+            ]
+          })}
+        </script>
+
+        <title>Swann Martin - Full-Stack Developer</title>
 
         <link rel="stylesheet" href="/styles.css" />
         <style>

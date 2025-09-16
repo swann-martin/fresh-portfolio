@@ -6,6 +6,7 @@ import Experience from "../islands/Experience.tsx";
 import Contact from "../islands/Contact.tsx";
 import ThemeToggle from "../islands/ThemeToggle.tsx";
 import ParticleBackground from "../islands/ParticleBackground.tsx";
+import ErrorBoundary from "../islands/ErrorBoundary.tsx";
 
 export default function Home(_props: PageProps) {
   return (
@@ -19,15 +20,21 @@ export default function Home(_props: PageProps) {
         </div>
 
         <div class="w-full px-4">
-          <Projects />
+          <ErrorBoundary>
+            <Projects />
+          </ErrorBoundary>
         </div>
 
         <div class="w-full">
-          <Experience />
+          <ErrorBoundary>
+            <Experience />
+          </ErrorBoundary>
         </div>
 
         <div class="w-full">
-          <Contact />
+          <ErrorBoundary>
+            <Contact />
+          </ErrorBoundary>
         </div>
       </div>
 

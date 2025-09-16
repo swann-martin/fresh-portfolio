@@ -4,10 +4,12 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $api_contact from "./routes/api/contact.ts";
 import * as $api_data from "./routes/api/data.ts";
 import * as $index from "./routes/index.tsx";
 import * as $Card from "./islands/Card.tsx";
 import * as $Contact from "./islands/Contact.tsx";
+import * as $ErrorBoundary from "./islands/ErrorBoundary.tsx";
 import * as $Experience from "./islands/Experience.tsx";
 import * as $Hero from "./islands/Hero.tsx";
 import * as $Navbar from "./islands/Navbar.tsx";
@@ -20,12 +22,14 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/api/contact.ts": $api_contact,
     "./routes/api/data.ts": $api_data,
     "./routes/index.tsx": $index,
   },
   islands: {
     "./islands/Card.tsx": $Card,
     "./islands/Contact.tsx": $Contact,
+    "./islands/ErrorBoundary.tsx": $ErrorBoundary,
     "./islands/Experience.tsx": $Experience,
     "./islands/Hero.tsx": $Hero,
     "./islands/Navbar.tsx": $Navbar,

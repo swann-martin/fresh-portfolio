@@ -1,85 +1,15 @@
-import { useEffect } from "preact/hooks";
-
 export default function ParticleBackground() {
-  useEffect(() => {
-    const loadParticles = async () => {
-      try {
-        // Dynamic import of tsParticles
-        const tsParticles = await import(
-          "https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/+esm"
-        );
-
-        // Initialize tsParticles
-        await tsParticles.default.load("tsparticles", {
-          fpsLimit: 60,
-          fullScreen: {
-            enable: false,
-            zIndex: -1,
-          },
-          particles: {
-            color: {
-              value: "#6366f1", // Indigo color
-            },
-            links: {
-              color: "#6366f1",
-              distance: 150,
-              enable: true,
-              opacity: 0.2,
-              width: 1,
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outModes: {
-                default: "bounce",
-              },
-              random: false,
-              speed: 0.8,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                area: 800,
-              },
-              value: 80,
-            },
-            opacity: {
-              value: 0.3,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 3 },
-            },
-          },
-          detectRetina: true,
-        });
-      } catch (error) {
-        console.error("Failed to load particles:", error);
-      }
-    };
-
-    loadParticles();
-
-    return () => {
-      // Clean up particles if needed
-      const container = document.getElementById("tsparticles");
-      if (container) {
-        container.innerHTML = "";
-      }
-    };
-  }, []);
-
   return (
     <div
-      id="tsparticles"
-      class="fixed inset-0 w-full h-full pointer-events-none"
+      class="fixed inset-0 w-full h-full pointer-events-none opacity-30"
       aria-hidden="true"
-    />
+    >
+      {/* Simple CSS-based particle effect as fallback */}
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-indigo-400/20 rounded-full animate-pulse"></div>
+      <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-purple-400/20 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+      <div class="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-pink-400/20 rounded-full animate-pulse" style="animation-delay: 2s"></div>
+      <div class="absolute top-1/2 right-1/4 w-1 h-1 bg-indigo-400/20 rounded-full animate-pulse" style="animation-delay: 0.5s"></div>
+    </div>
   );
 }
