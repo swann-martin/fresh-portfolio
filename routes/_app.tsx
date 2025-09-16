@@ -14,15 +14,24 @@ export default function App({ Component }: PageProps) {
           name="description"
           content="Swann Martin - Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh. Creating modern web applications with clean, efficient code."
         />
-        <meta name="keywords" content="web developer, full-stack developer, React, TypeScript, Deno, Fresh, JavaScript, portfolio" />
+        <meta
+          name="keywords"
+          content="web developer, full-stack developer, React, TypeScript, Deno, Fresh, JavaScript, portfolio"
+        />
         <meta name="author" content="Swann Martin" />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Swann Martin - Full-Stack Developer" />
-        <meta property="og:description" content="Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh. Creating modern web applications with clean, efficient code." />
-        <meta property="og:image" content="https://swannmartin.xyz/home.webp" />
+        <meta
+          property="og:title"
+          content="Swann Martin - Full-Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh. Creating modern web applications with clean, efficient code."
+        />
+        <meta property="og:image" content="/homephone.webp" />
         <meta property="og:image:width" content="1870" />
         <meta property="og:image:height" content="939" />
         <meta property="og:url" content="https://swannmartin.xyz" />
@@ -30,9 +39,15 @@ export default function App({ Component }: PageProps) {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Swann Martin - Full-Stack Developer" />
-        <meta name="twitter:description" content="Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh." />
-        <meta name="twitter:image" content="https://swannmartin.xyz/home.webp" />
+        <meta
+          name="twitter:title"
+          content="Swann Martin - Full-Stack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Full-Stack Developer specializing in React, TypeScript, Deno, and Fresh."
+        />
+        <meta name="twitter:image" content="/homephone.webp" />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -44,7 +59,7 @@ export default function App({ Component }: PageProps) {
             "url": "https://swannmartin.xyz",
             "sameAs": [
               "https://github.com/swann-martin",
-              "https://www.linkedin.com/in/swann-martin/"
+              "https://www.linkedin.com/in/swann-martin/",
             ],
             "knowsAbout": [
               "React",
@@ -53,8 +68,8 @@ export default function App({ Component }: PageProps) {
               "Fresh",
               "JavaScript",
               "Web Development",
-              "Full-Stack Development"
-            ]
+              "Full-Stack Development",
+            ],
           })}
         </script>
 

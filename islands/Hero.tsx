@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
             <img
               alt="Professional headshot of Swann Martin, a web developer"
-              src="swann.jpg"
+              src="/swann.jpg"
               loading="eager"
               class="absolute inset-0 h-full w-full object-cover object-top filter brightness-105 group-hover:scale-105 transition-transform duration-700"
             />
@@ -57,7 +57,10 @@ export default function Hero() {
 
           <div class="lg:py-24 flex flex-col items-center lg:items-start relative z-10">
             <div class="flex items-center mb-8 relative">
-              <div class="absolute -top-10 -left-10 w-24 h-24 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-xl" aria-hidden="true">
+              <div
+                class="absolute -top-10 -left-10 w-24 h-24 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-xl"
+                aria-hidden="true"
+              >
               </div>
               <img
                 class="h-16 w-16 lg:h-20 lg:w-20 mr-4 animate-float"
@@ -68,13 +71,23 @@ export default function Hero() {
                 style="animation: float 6s ease-in-out infinite"
               />
               <div class="flex flex-col">
-                <h1 id="hero-heading" class="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+                <h1
+                  id="hero-heading"
+                  class="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent"
+                >
                   Swann Martin
                 </h1>
-                <div class="h-8 flex items-center" aria-live="polite" aria-atomic="true">
+                <div
+                  class="h-8 flex items-center"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
                   <span class="text-xl lg:text-2xl font-medium text-gray-800 dark:text-gray-200">
                     I am a{" "}
-                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold" aria-label={`Currently showing: ${typedText.value}`}>
+                    <span
+                      class="text-indigo-600 dark:text-indigo-400 font-semibold"
+                      aria-label={`Currently showing: ${typedText.value}`}
+                    >
                       {typedText.value}
                     </span>
                     <span class="animate-pulse" aria-hidden="true">|</span>
@@ -88,11 +101,15 @@ export default function Hero() {
             </h2>
 
             <p class="mt-4 text-gray-700 dark:text-gray-200 text-lg leading-relaxed text-center lg:text-left backdrop-blur-sm relative">
-              <span class="absolute -left-4 top-0 w-1 h-full bg-indigo-500 opacity-70" aria-hidden="true">
+              <span
+                class="absolute -left-4 top-0 w-1 h-full bg-indigo-500 opacity-70"
+                aria-hidden="true"
+              >
               </span>
-              As a passionate full-stack developer, I specialize in creating modern web applications
-              using cutting-edge technologies. From React and TypeScript to Deno and Fresh, I bring
-              ideas to life with clean, efficient, and scalable code.
+              As a passionate full-stack developer, I specialize in creating
+              modern web applications using cutting-edge technologies. From
+              React and TypeScript to Deno and Fresh, I bring ideas to life with
+              clean, efficient, and scalable code.
             </p>
 
             <div class="mt-10 flex flex-wrap gap-4">
